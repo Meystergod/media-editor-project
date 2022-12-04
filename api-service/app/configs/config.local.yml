@@ -1,0 +1,28 @@
+app-config:
+  log-level: trace
+
+http:
+  ip: 0.0.0.0
+  port: 8000
+  cors:
+    allowed-methods: [ "POST" ]
+    allowed-origins:
+      - "*"
+    allow-credentials: true
+    allowed-headers:
+      - "Authorization"
+      - "Location"
+      - "Charset"
+      - "Access-Control-Allow-Origin"
+      - "Content-Type"
+      - "Origin"
+      - "Accept"
+      - "Content-Length"
+      - "Accept-Encoding"
+      - "X-CSRF-Token"
+    options-passthrough: true
+    exposed-headers:
+      - "Location"
+      - "Authorization"
+      - "Content-Disposition"
+    debug: true
